@@ -1,5 +1,5 @@
 import { fetchLeaderboard } from './content.js';
-import SiteHeader from './Components/Header.js';
+import SiteHeader from './Header.js';
 
 const { createApp } = Vue;
 
@@ -51,7 +51,7 @@ createApp({
       this.streams = data.streams;
       this.selectedPlayer = this.rankedPlayers[0] || null;
     } catch (error) {
-      this.error = 'Could not load leaderboard data. Check that data/_players.json and data/_streams.json are valid JSON.';
+      this.error = 'Could not load leaderboard data. Check that _players.json and _streams.json are valid JSON.';
       console.error(error);
     } finally {
       this.loading = false;
