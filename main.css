@@ -98,11 +98,12 @@ body {
 }
 
 .channel-button {
-  padding: 7px 11px;
-  border-radius: 6px;
+  padding: 12px 20px;
+  border-radius: 8px;
   background: #fff;
   color: #686868;
-  font-size: 13px;
+  font-size: 16px;
+  font-weight: 600;
   text-decoration: none;
   white-space: nowrap;
 }
