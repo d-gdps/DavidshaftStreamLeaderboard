@@ -84,33 +84,49 @@ body {
 }
 
 .icon-button {
-  width: 28px;
-  height: 30px;
-  display: grid;
-  place-items: center;
+  width: 71px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  cursor: pointer;
+  color: var(--header-text);
   background: transparent;
   border-radius: 6px;
-  font-size: 18px;
 }
 
 .icon-button:hover {
   background: rgba(255,255,255,.15);
 }
 
-.channel-button {
-    width: 156px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.theme-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
 
-    border-radius: 8px;
-    background: #fff;
-    color: #686868;
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
-    white-space: nowrap;
+.discord-logo {
+  width: 71px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.channel-button {
+  width: 156px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  border-radius: 8px;
+  background: #fff;
+  color: #686868;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 .channel-button:hover {
@@ -292,8 +308,11 @@ body {
   }
 
   .channel-button {
-    padding: 6px 8px;
+    width: 156px;
+    height: 44px;
+    padding: 0;
     font-size: 11px;
+    flex-shrink: 0;
   }
 
   .page-layout {
