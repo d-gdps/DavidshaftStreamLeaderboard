@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#686868">
+  <title>Davidshaft Stream Leaderboard</title>
+  <link rel="icon" href="./Assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/typography.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <div id="app" v-cloak>
+    <site-header
+      :dark="dark"
+      @toggle-theme="toggleTheme"
+    ></site-header>
+
+    <main class="page-layout">
+      <section class="leaderboard-panel" aria-label="Leaderboard">
+        <div class="section-heading">
+          <h2>LEADERBOARD</h2>
+          <span class="player-count">{{ players.length }} PLAYERS</span>
+        </div>
+
+        <div v-if="loading" class="message">Loading leaderboard...</div>
+        <div v-else-if="error" class="message error">{{ error }}</div>
+        <div v-else-if="players.length === 0" class="message">No players have been added yet.</div>
+
+        <button
+          v-for="(player, index) in rankedPlayers"
+          :key="player.name"
+          class="player-row"
+          :class="{ selected: selectedPlayer && selectedPlayer.name === player.name }"
+          @click="selectPlayer(player)"
+          type="button"
+        >
+          <span class="player-rank">#{{ index + 1 }}</span>
+          <span class="player-xp">{{ formatXP(player.xp) }} XP</span>
+          <span class="player-name">{{ player.name }}</span>
+        </button>
+      </section>
+
+      <section class="player-panel" aria-live="polite">
+        <template v-if="selectedPlayer">
+          <div class="player-heading">
+            <h1>#{{ selectedRank }} {{ selectedPlayer.name }}</h1>
+            <p class="total-xp">{{ formatXP(selectedPlayer.xp) }} XP</p>
+          </div>
+
+          <div class="stats-heading">
+            <h2>STREAM STATS:</h2>
+            <span>{{ playerStreams.length }} {{ playerStreams.length === 1 ? 'STREAM' : 'STREAMS' }}</span>
+          </div>
+
+          <div v-if="playerStreams.length" class="stream-list">
+            <div v-for="(stream, index) in playerStreams" :key="stream.id || index" class="stream-row">
+              <span class="stream-rank">#{{ index + 1 }}</span>
+              <span class="stream-name">{{ stream.name }}</span>
+              <span class="stream-date">{{ stream.date }}</span>
+              <strong class="stream-xp">{{ formatXP(stream.xp) }} XP</strong>
+            </div>
+          </div>
+          <p v-else class="empty-streams">No streams have been recorded for this player yet.</p>
+        </template>
+        <div v-else class="empty-selection">Select a player to view their stats.</div>
+      </section>
+    </main>
+    <footer class="site-footer">DAVIDSHAFT STREAM LEADERBOARD</footer>
+  </div>
+
+  <!-- Vue 3 is loaded from its official CDN; no build step is required. -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
