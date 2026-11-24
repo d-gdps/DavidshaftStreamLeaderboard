@@ -17,7 +17,7 @@ export default {
           <a class="icon-button" href="https://discord.com/" target="_blank"
             rel="noopener noreferrer" aria-label="Discord" title="Discord">🎮</a>
           <!-- Replace with your own stream/channel URL. -->
-          <a class="channel-button" href="https://www.youtube.com/" target="_blank"
+          <a class="channel-button" href="https://www.youtube.com/channel/UCr2sml5eSCwnTLRXZaEDXvA" target="_blank"
             rel="noopener noreferrer">View Channel</a>
         </nav>
       </div>
