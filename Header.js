@@ -5,7 +5,7 @@ export default {
     <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="./" aria-label="Davidshaft Stream Leaderboard home">
-          <img src="./logo.svg" alt="">
+          <img src="./logo.png" alt="Davidshaft Logo">
           <span>DAVIDSHAFT STREAM LEADERBOARD</span>
         </a>
         <nav class="header-actions" aria-label="Header links">
