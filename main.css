@@ -98,14 +98,19 @@ body {
 }
 
 .channel-button {
-  padding: 12px 20px;
-  border-radius: 8px;
-  background: #fff;
-  color: #686868;
-  font-size: 16px;
-  font-weight: 600;
-  text-decoration: none;
-  white-space: nowrap;
+    width: 156px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+    background: #fff;
+    color: #686868;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
 .channel-button:hover {
