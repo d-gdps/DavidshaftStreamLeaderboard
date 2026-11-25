@@ -2,28 +2,55 @@
   {
     "id": 1,
     "player": "Cachorrocomenopudim",
-    "name": "Stream",
+    "name": "Stream 1",
+    "date": "11/21/26",
+    "sortDate": "2026-11-21",
+    "xp": 90,
+    "rank": 1
+  },
+  {
+    "id": 2,
+    "player": "Yairistic2",
+    "name": "Stream 1",
+    "date": "11/21/26",
+    "sortDate": "2026-11-21",
+    "xp": 80,
+    "rank": 2
+  },
+  {
+    "id": 3,
+    "player": "imNFCDragon",
+    "name": "Stream 1",
+    "date": "11/21/26",
+    "sortDate": "2026-11-21",
+    "xp": 80,
+    "rank": 3
+  },
+  {
+    "id": 4,
+    "player": "Cachorrocomenopudim",
+    "name": "Stream 2",
     "date": "11/24/26",
     "sortDate": "2026-11-24",
     "xp": 215,
     "rank": 1
   },
   {
-    "id": 2,
+    "id": 5,
     "player": "Zephrryo",
-    "name": "Stream",
+    "name": "Stream 2",
     "date": "11/24/26",
     "sortDate": "2026-11-24",
     "xp": 165,
     "rank": 2
   },
   {
-    "id": 3,
+    "id": 6,
     "player": "PurpRabbitzGD",
-    "name": "Stream",
+    "name": "Stream 2",
     "date": "11/24/26",
     "sortDate": "2026-11-24",
     "xp": 150,
     "rank": 3
-  }
+  },
 ]
