@@ -45,7 +45,7 @@
           </div>
           <div v-if="playerStreams.length" class="stream-list">
             <div v-for="(stream, index) in playerStreams" :key="stream.id || index" class="stream-row">
-              <span class="stream-rank">#{{ index + 1 }}</span>
+              <span class="stream-rank">#{{ stream.rank ?? index + 1 }}</span>
               <span class="stream-name">{{ stream.name }}</span>
               <span class="stream-date">{{ stream.date }}</span>
               <strong class="stream-xp">{{ formatXP(stream.xp) }} XP</strong>
