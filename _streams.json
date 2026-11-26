@@ -52,5 +52,32 @@
     "sortDate": "2026-11-24",
     "xp": 150,
     "rank": 3
+  },
+  {
+    "id": 7,
+    "player": "Yairistic2",
+    "name": "Stream 3",
+    "date": "11/26/26",
+    "sortDate": "2026-11-26",
+    "xp": 495,
+    "rank": 1
+  },
+  {
+    "id": 8,
+    "player": "24 T Rizzle",
+    "name": "Stream 3",
+    "date": "11/26/26",
+    "sortDate": "2026-11-26",
+    "xp": 495,
+    "rank": 2
+  },
+  {
+    "id": 9,
+    "player": "TheRealZAqwed",
+    "name": "Stream 3",
+    "date": "11/26/26",
+    "sortDate": "2026-11-26",
+    "xp": 225,
+    "rank": 3
   }
 ]
